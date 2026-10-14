@@ -1,0 +1,8 @@
+{"question": "How many days do I have to request a refund?", "expected_doc": "refund-policy", "expected_keywords": ["30 days"]}
+{"question": "Are digital gift cards refundable?", "expected_doc": "refund-policy", "expected_keywords": ["not refundable"]}
+{"question": "How long does express shipping take?", "expected_doc": "shipping", "expected_keywords": ["1 business day"]}
+{"question": "Which countries do you ship to?", "expected_doc": "shipping", "expected_keywords": ["India"]}
+{"question": "How many failed login attempts lock the account?", "expected_doc": "account-security", "expected_keywords": ["15 minutes"]}
+{"question": "How long must passwords be?", "expected_doc": "account-security", "expected_keywords": ["12 characters"]}
+{"question": "What is the CEO's favourite colour?", "expected_doc": null}
+{"question": "Do you offer student discounts?", "expected_doc": null}
