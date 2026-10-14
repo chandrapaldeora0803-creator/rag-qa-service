@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Unit and API tests (offline, mock LLM)
+        run: pytest -q
+
+      - name: Evaluation gate
+        run: python -m rag.evaluation --min-recall 0.8
+
+      - name: Build Docker image
+        run: docker build -t rag-qa-service .
